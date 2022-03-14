@@ -1,0 +1,14 @@
+<table mat-table [dataSource]="dataSource" *ngIf="!!dataSource?.data?.length">
+	<ng-container matColumnDef="cityName">
+		<th mat-header-cell *matHeaderCellDef>City Name</th>
+		<td mat-cell *matCellDef="let element">{{ element.cityName }}</td>
+	</ng-container>
+
+	<ng-container *ngFor="let dt of displayedColumns; let i = index" [matColumnDef]="displayedColumns[i + 1]">
+		<th mat-header-cell *matHeaderCellDef="let element">{{ displayedColumns[i + 1] }}</th>
+		<td mat-cell *matCellDef="let element">{{ element.dateTimes[i].temp }}°</td>
+	</ng-container>
+
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
