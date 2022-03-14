@@ -2,8 +2,8 @@
 	"compileOnSave": false,
 	"compilerOptions": {
 		"paths": {
-			"@bp/line-chart/models": ["libs/line-chart/models/src/index.ts"],
-			"@bp/line-chart/services": ["libs/line-chart/services/src/index.ts"],
+			"@bp/forecast-layout": ["libs/forecast-layout/src/index.ts"],
+			"@bp/material": ["libs/material/src/index.ts"],
 			"@bp/weather-forecast/services": ["libs/weather-forecast/services/src/index.ts"]
 		},
 		"baseUrl": ".",
